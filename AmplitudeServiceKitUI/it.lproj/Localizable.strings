@@ -1,0 +1,8 @@
+/* The title of the Amplitude API key */
+"API Key" = "Chiave API";
+
+/* Button title to delete a service */
+"Delete Service" = "Delete Service";
+
+/* The default placeholder for required text */
+"Required" = "Necessario";
