@@ -53,7 +53,7 @@ public final class AmplitudeService: Service {
         return [:]
     }
 
-    public var isComplete: Bool { return apiKey?.isEmpty == false }
+    public var hasValidConfiguration: Bool { return apiKey?.isEmpty == false }
 
     public func notifyCreated(completion: @escaping () -> Void) {
         try! KeychainManager().setAmplitudeAPIKey(apiKey)
@@ -99,123 +99,7 @@ extension AmplitudeService {
 
 extension AmplitudeService: Analytics {
 
-    // MARK: - UIApplicationDelegate
-
-    public func application(didFinishLaunchingWithOptions launchOptions: [AnyHashable: Any]?) {
-        logEvent("App Launch")
-    }
-
-    // MARK: - Screens
-
-    public func didDisplayBolusScreen() {
-        logEvent("Bolus Screen")
-    }
-
-    public func didDisplaySettingsScreen() {
-        logEvent("Settings Screen")
-    }
-
-    public func didDisplayStatusScreen() {
-        logEvent("Status Screen")
-    }
-
-    // MARK: - Config Events
-
-    public func transmitterTimeDidDrift(_ drift: TimeInterval) {
-        logEvent("Transmitter time change", withProperties: ["value" : drift], outOfSession: true)
-    }
-
-    public func pumpTimeDidDrift(_ drift: TimeInterval) {
-        logEvent("Pump time change", withProperties: ["value": drift], outOfSession: true)
-    }
-
-    public func pumpTimeZoneDidChange() {
-        logEvent("Pump time zone change", outOfSession: true)
-    }
-
-    public func pumpBatteryWasReplaced() {
-        logEvent("Pump battery replacement", outOfSession: true)
-    }
-
-    public func reservoirWasRewound() {
-        logEvent("Pump reservoir rewind", outOfSession: true)
-    }
-
-    public func didChangeBasalRateSchedule() {
-        logEvent("Basal rate change")
-    }
-
-    public func didChangeCarbRatioSchedule() {
-        logEvent("Carb ratio change")
-    }
-
-    public func didChangeInsulinModel() {
-        logEvent("Insulin model change")
-    }
-
-    public func didChangeInsulinSensitivitySchedule() {
-        logEvent("Insulin sensitivity change")
-    }
-
-    public func didChangeLoopSettings(from oldValue: LoopSettings, to newValue: LoopSettings) {
-        if newValue.maximumBasalRatePerHour != oldValue.maximumBasalRatePerHour {
-            logEvent("Maximum basal rate change")
-        }
-
-        if newValue.maximumBolus != oldValue.maximumBolus {
-            logEvent("Maximum bolus change")
-        }
-
-        if newValue.suspendThreshold != oldValue.suspendThreshold {
-            logEvent("Minimum BG Guard change")
-        }
-
-        if newValue.dosingEnabled != oldValue.dosingEnabled {
-            logEvent("Closed loop enabled change")
-        }
-
-        if newValue.retrospectiveCorrectionEnabled != oldValue.retrospectiveCorrectionEnabled {
-            logEvent("Retrospective correction enabled change")
-        }
-
-        if newValue.glucoseTargetRangeSchedule != oldValue.glucoseTargetRangeSchedule {
-            if newValue.glucoseTargetRangeSchedule?.timeZone != oldValue.glucoseTargetRangeSchedule?.timeZone {
-                self.pumpTimeZoneDidChange()
-            } else if newValue.glucoseTargetRangeSchedule?.override != oldValue.glucoseTargetRangeSchedule?.override {
-                logEvent("Glucose target range override change", outOfSession: true)
-            } else {
-                logEvent("Glucose target range change")
-            }
-        }
-    }
-
-    // MARK: - Loop Events
-
-    public func didAddCarbsFromWatch() {
-        logEvent("Carb entry created", withProperties: ["source" : "Watch"], outOfSession: true)
-    }
-
-    public func didRetryBolus() {
-        logEvent("Bolus Retry", outOfSession: true)
-    }
-
-    public func didSetBolusFromWatch(_ units: Double) {
-        logEvent("Bolus set", withProperties: ["source" : "Watch"], outOfSession: true)
-    }
-
-    public func didFetchNewCGMData() {
-        logEvent("CGM Fetch", outOfSession: true)
-    }
-
-    public func loopDidSucceed() {
-        logEvent("Loop success", outOfSession: true)
-    }
-
-    public func loopDidError() {
-        logEvent("Loop error", outOfSession: true)
-    }
-
-    private func logEvent(_ name: String, withProperties properties: [AnyHashable: Any]? = nil, outOfSession: Bool = false) {
+    public func recordAnalyticsEvent(_ name: String, withProperties properties: [AnyHashable: Any]?, outOfSession: Bool) {
         client?.logEvent(name, withEventProperties: properties, outOfSession: outOfSession)
     }
 
