@@ -1,8 +1,0 @@
-/* The title of the Amplitude API key */
-"API Key" = "API Key";
-
-/* Button title to delete a service */
-"Delete Service" = "Delete Service";
-
-/* The default placeholder for required text */
-"Required" = "Required";

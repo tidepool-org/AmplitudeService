@@ -21,7 +21,6 @@
 		A9303DEC22BC41CF00F49C3F /* LoopKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9303DEA22BC41B100F49C3F /* LoopKit.framework */; };
 		A9303DEE22BC41CF00F49C3F /* LoopKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9303DED22BC41CF00F49C3F /* LoopKitUI.framework */; };
 		A9927C9922BC29950006B7E9 /* AmplitudeServiceKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9927C9022BC29940006B7E9 /* AmplitudeServiceKitUI.framework */; };
-		A9927C9E22BC29950006B7E9 /* AmplitudeServiceKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9927C9D22BC29950006B7E9 /* AmplitudeServiceKitUITests.swift */; };
 		A9927CA022BC29950006B7E9 /* AmplitudeServiceKitUI.h in Headers */ = {isa = PBXBuildFile; fileRef = A9927C9222BC29940006B7E9 /* AmplitudeServiceKitUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9A1EE8522BC59F900DFACDA /* IdentifiableClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A1EE8422BC59F900DFACDA /* IdentifiableClass.swift */; };
 		A9A1EE8722BC5AA100DFACDA /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A1EE8622BC5AA100DFACDA /* NibLoadable.swift */; };
@@ -31,7 +30,6 @@
 		A9B007AA22BD6D37000131DE /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B007A922BD6D37000131DE /* LocalizedString.swift */; };
 		A9B007AC22BD6D99000131DE /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B007A922BD6D37000131DE /* LocalizedString.swift */; };
 		A9C7BE4F22B9A7C0001F3FB4 /* AmplitudeServiceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C7BE4522B9A7C0001F3FB4 /* AmplitudeServiceKit.framework */; };
-		A9C7BE5422B9A7C0001F3FB4 /* AmplitudeServiceKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C7BE5322B9A7C0001F3FB4 /* AmplitudeServiceKitTests.swift */; };
 		A9C7BE5622B9A7C0001F3FB4 /* AmplitudeServiceKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A9C7BE4822B9A7C0001F3FB4 /* AmplitudeServiceKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9C7BE8F22B9F6FA001F3FB4 /* LoopKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C7BE8D22B9F6FA001F3FB4 /* LoopKit.framework */; };
 /* End PBXBuildFile section */
@@ -76,13 +74,11 @@
 		A9927C9222BC29940006B7E9 /* AmplitudeServiceKitUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmplitudeServiceKitUI.h; sourceTree = "<group>"; };
 		A9927C9322BC29940006B7E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9927C9822BC29940006B7E9 /* AmplitudeServiceKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmplitudeServiceKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9927C9D22BC29950006B7E9 /* AmplitudeServiceKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmplitudeServiceKitUITests.swift; sourceTree = "<group>"; };
 		A9927C9F22BC29950006B7E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9A1EE8422BC59F900DFACDA /* IdentifiableClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableClass.swift; sourceTree = "<group>"; };
 		A9A1EE8622BC5AA100DFACDA /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		A9A1EE8B22BC5BB400DFACDA /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		A9B0078222BD5761000131DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A9B0078422BD5769000131DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A9B0078522BD5769000131DE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A9B0078622BD576A000131DE /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A9B0078722BD576B000131DE /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -102,13 +98,11 @@
 		A9B007A522BD5B8A000131DE /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A9B007A622BD5B8B000131DE /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A9B007A722BD5B8B000131DE /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A9B007A822BD5B8C000131DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A9B007A922BD6D37000131DE /* LocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
 		A9C7BE4522B9A7C0001F3FB4 /* AmplitudeServiceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AmplitudeServiceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9C7BE4822B9A7C0001F3FB4 /* AmplitudeServiceKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmplitudeServiceKit.h; sourceTree = "<group>"; };
 		A9C7BE4922B9A7C0001F3FB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9C7BE4E22B9A7C0001F3FB4 /* AmplitudeServiceKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmplitudeServiceKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9C7BE5322B9A7C0001F3FB4 /* AmplitudeServiceKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmplitudeServiceKitTests.swift; sourceTree = "<group>"; };
 		A9C7BE5522B9A7C0001F3FB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9C7BE8D22B9F6FA001F3FB4 /* LoopKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoopKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9C7BE8E22B9F6FA001F3FB4 /* LoopKitUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoopKitUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,7 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				A9927C9F22BC29950006B7E9 /* Info.plist */,
-				A9927C9D22BC29950006B7E9 /* AmplitudeServiceKitUITests.swift */,
 			);
 			path = AmplitudeServiceKitUITests;
 			sourceTree = "<group>";
@@ -238,7 +231,6 @@
 			isa = PBXGroup;
 			children = (
 				A9C7BE5522B9A7C0001F3FB4 /* Info.plist */,
-				A9C7BE5322B9A7C0001F3FB4 /* AmplitudeServiceKitTests.swift */,
 			);
 			path = AmplitudeServiceKitTests;
 			sourceTree = "<group>";
@@ -511,7 +503,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9927C9E22BC29950006B7E9 /* AmplitudeServiceKitUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,7 +519,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9C7BE5422B9A7C0001F3FB4 /* AmplitudeServiceKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,7 +547,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				A9B0078222BD5761000131DE /* Base */,
-				A9B0078422BD5769000131DE /* en */,
 				A9B0078522BD5769000131DE /* fr */,
 				A9B0078622BD576A000131DE /* es */,
 				A9B0078722BD576B000131DE /* ru */,
@@ -584,7 +573,6 @@
 				A9B007A522BD5B8A000131DE /* de */,
 				A9B007A622BD5B8B000131DE /* ru */,
 				A9B007A722BD5B8B000131DE /* es */,
-				A9B007A822BD5B8C000131DE /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
