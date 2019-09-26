@@ -97,7 +97,7 @@ extension AmplitudeService {
 }
 
 
-extension AmplitudeService: Analytics {
+extension AmplitudeService: AnalyticsService {
 
     public func recordAnalyticsEvent(_ name: String, withProperties properties: [AnyHashable: Any]?, outOfSession: Bool) {
         client?.logEvent(name, withEventProperties: properties, outOfSession: outOfSession)
