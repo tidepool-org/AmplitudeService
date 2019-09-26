@@ -1,6 +1,6 @@
 //
 //  LocalizedString.swift
-//  AmplitudeServiceKit
+//  AmplitudeService
 //
 //  Created by Darin Krauss on 6/21/19.
 //  Copyright © 2019 LoopKit Authors. All rights reserved.

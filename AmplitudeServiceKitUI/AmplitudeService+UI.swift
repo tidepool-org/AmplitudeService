@@ -6,17 +6,18 @@
 //  Copyright © 2019 LoopKit Authors. All rights reserved.
 //
 
+import LoopKit
 import LoopKitUI
 import AmplitudeServiceKit
 
 
 extension AmplitudeService: ServiceUI {
 
-    public static func setupViewController() -> (UIViewController & ServiceSetupNotifying & CompletionNotifying)? {
+    public static func setupViewController() -> (UIViewController & ServiceNotifying & CompletionNotifying)? {
         return ServiceViewController(rootViewController: AmplitudeServiceTableViewController(amplitudeService: AmplitudeService(), for: .create))
     }
 
-    public func settingsViewController() -> (UIViewController & CompletionNotifying) {
+    public func settingsViewController() -> (UIViewController & ServiceNotifying & CompletionNotifying) {
       return ServiceViewController(rootViewController: AmplitudeServiceTableViewController(amplitudeService: self, for: .update))
     }
 
