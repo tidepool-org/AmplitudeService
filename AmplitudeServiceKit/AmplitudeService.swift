@@ -53,7 +53,7 @@ public final class AmplitudeService: Service {
         return [:]
     }
 
-    public var hasValidConfiguration: Bool { return apiKey?.isEmpty == false }
+    public var hasConfiguration: Bool { return apiKey?.isEmpty == false }
 
     public func notifyCreated(completion: @escaping () -> Void) {
         try! KeychainManager().setAmplitudeAPIKey(apiKey)
