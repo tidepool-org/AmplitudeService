@@ -10,7 +10,6 @@ import LoopKit
 import LoopKitUI
 import AmplitudeServiceKit
 
-
 extension AmplitudeService: ServiceUI {
 
     public static func setupViewController() -> (UIViewController & ServiceNotifying & CompletionNotifying)? {

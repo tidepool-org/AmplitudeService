@@ -9,7 +9,6 @@
 import Amplitude
 import LoopKit
 
-
 public final class AmplitudeService: Service {
 
     public static let managerIdentifier = "AmplitudeService"
@@ -93,7 +92,6 @@ extension AmplitudeService {
 
 }
 
-
 extension AmplitudeService: AnalyticsService {
 
     public func recordAnalyticsEvent(_ name: String, withProperties properties: [AnyHashable: Any]?, outOfSession: Bool) {
@@ -101,7 +99,6 @@ extension AmplitudeService: AnalyticsService {
     }
 
 }
-
 
 extension KeychainManager {
 

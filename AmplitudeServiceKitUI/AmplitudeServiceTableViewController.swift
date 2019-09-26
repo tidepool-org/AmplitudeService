@@ -11,7 +11,6 @@ import LoopKit
 import LoopKitUI
 import AmplitudeServiceKit
 
-
 final class AmplitudeServiceTableViewController: ServiceTableViewController, UITextFieldDelegate {
 
     private let amplitudeService: AmplitudeService
@@ -137,11 +136,8 @@ final class AmplitudeServiceTableViewController: ServiceTableViewController, UIT
 
 }
 
-
 extension AuthenticationTableViewCell: IdentifiableClass {}
 
-
 extension AuthenticationTableViewCell: NibLoadable {}
-
 
 extension TextButtonTableViewCell: IdentifiableClass {}
