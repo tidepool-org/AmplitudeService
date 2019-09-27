@@ -9,7 +9,6 @@
 import Amplitude
 import LoopKit
 
-
 public final class AmplitudeService: Service {
 
     public static let managerIdentifier = "AmplitudeService"
@@ -53,23 +52,20 @@ public final class AmplitudeService: Service {
         return [:]
     }
 
-    public var hasValidConfiguration: Bool { return apiKey?.isEmpty == false }
+    public var hasConfiguration: Bool { return apiKey?.isEmpty == false }
 
-    public func notifyCreated(completion: @escaping () -> Void) {
+    public func completeCreate() {
         try! KeychainManager().setAmplitudeAPIKey(apiKey)
         createClient()
-        notifyDelegateOfCreation(completion: completion)
     }
 
-    public func notifyUpdated(completion: @escaping () -> Void) {
+    public func completeUpdate() {
         try! KeychainManager().setAmplitudeAPIKey(apiKey)
         createClient()
-        notifyDelegateOfUpdation(completion: completion)
     }
 
-    public func notifyDeleted(completion: @escaping () -> Void) {
+    public func completeDelete() {
         try! KeychainManager().setAmplitudeAPIKey()
-        notifyDelegateOfDeletion(completion: completion)
     }
 
     private func createClient() {
@@ -96,15 +92,13 @@ extension AmplitudeService {
 
 }
 
-
-extension AmplitudeService: Analytics {
+extension AmplitudeService: AnalyticsService {
 
     public func recordAnalyticsEvent(_ name: String, withProperties properties: [AnyHashable: Any]?, outOfSession: Bool) {
         client?.logEvent(name, withEventProperties: properties, outOfSession: outOfSession)
     }
 
 }
-
 
 extension KeychainManager {
 
