@@ -11,29 +11,9 @@ import LoopKit
 
 public final class AmplitudeService: Service {
 
-    public static let managerIdentifier = "AmplitudeService"
+    public static let serviceIdentifier = "AmplitudeService"
 
     public static let localizedTitle = LocalizedString("Amplitude", comment: "The title of the Amplitude service")
-
-    public var delegateQueue: DispatchQueue! {
-        get {
-            return delegate.queue
-        }
-        set {
-            delegate.queue = newValue
-        }
-    }
-
-    public weak var serviceDelegate: ServiceDelegate? {
-        get {
-            return delegate.delegate
-        }
-        set {
-            delegate.delegate = newValue
-        }
-    }
-
-    private let delegate = WeakSynchronizedDelegate<ServiceDelegate>()
 
     public var apiKey: String?
 
@@ -78,16 +58,6 @@ public final class AmplitudeService: Service {
         } else {
             client = nil
         }
-    }
-
-}
-
-extension AmplitudeService {
-
-    public var debugDescription: String {
-        return """
-        ## AmplitudeService
-        """
     }
 
 }
