@@ -11,7 +11,6 @@ import LoopKitUI
 import AmplitudeServiceKit
 import AmplitudeServiceKitUI
 
-
 class AmplitudeServiceKitPlugin: NSObject, ServiceUIPlugin {
 
     private let log = OSLog(category: "AmplitudeServiceKitPlugin")
