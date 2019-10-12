@@ -15,7 +15,7 @@ public final class AmplitudeService: Service {
 
     public static let localizedTitle = LocalizedString("Amplitude", comment: "The title of the Amplitude service")
 
-    public var serviceDelegate: ServiceDelegate?
+    public weak var serviceDelegate: ServiceDelegate?
 
     public var apiKey: String?
 
