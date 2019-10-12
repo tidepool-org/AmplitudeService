@@ -15,6 +15,8 @@ public final class AmplitudeService: Service {
 
     public static let localizedTitle = LocalizedString("Amplitude", comment: "The title of the Amplitude service")
 
+    public var serviceDelegate: ServiceDelegate?
+
     public var apiKey: String?
 
     private var client: Amplitude?
@@ -42,6 +44,7 @@ public final class AmplitudeService: Service {
     public func completeUpdate() {
         try! KeychainManager().setAmplitudeAPIKey(apiKey)
         createClient()
+        serviceDelegate?.serviceDidUpdate(self)
     }
 
     public func completeDelete() {
