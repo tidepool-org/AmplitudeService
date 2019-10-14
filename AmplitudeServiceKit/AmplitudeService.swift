@@ -44,7 +44,7 @@ public final class AmplitudeService: Service {
     public func completeUpdate() {
         try! KeychainManager().setAmplitudeAPIKey(apiKey)
         createClient()
-        serviceDelegate?.serviceDidUpdate(self)
+        serviceDelegate?.serviceDidUpdateState(self)
     }
 
     public func completeDelete() {
