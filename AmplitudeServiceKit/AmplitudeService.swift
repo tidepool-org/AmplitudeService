@@ -21,13 +21,11 @@ public final class AmplitudeService: Service {
 
     private var client: Amplitude?
 
-    public init() {
+    public init() {}
+
+    public init?(rawState: RawStateValue) {
         self.apiKey = try? KeychainManager().getAmplitudeAPIKey()
         createClient()
-    }
-
-    public convenience init?(rawState: RawStateValue) {
-        self.init()
     }
 
     public var rawState: RawStateValue {

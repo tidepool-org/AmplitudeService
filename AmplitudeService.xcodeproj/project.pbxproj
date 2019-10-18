@@ -584,6 +584,7 @@
 			inputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/AmplitudeServiceKit.framework",
 				"$(BUILT_PRODUCTS_DIR)/AmplitudeServiceKitUI.framework",
+				"$(BUILT_PRODUCTS_DIR)/Amplitude.framework",
 			);
 			name = "Copy Frameworks with Carthage";
 			outputFileListPaths = (
