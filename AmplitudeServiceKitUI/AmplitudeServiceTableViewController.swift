@@ -70,9 +70,6 @@ final class AmplitudeServiceTableViewController: UITableViewController, UITextFi
             }
         case .update:
             service.completeUpdate()
-            if let serviceViewController = navigationController as? ServiceViewController {
-                serviceViewController.notifyServiceUpdated(service)
-            }
         }
         
         notifyComplete()
