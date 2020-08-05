@@ -16,7 +16,7 @@ extension AmplitudeService: ServiceUI {
         return ServiceViewController(rootViewController: AmplitudeServiceTableViewController(service: AmplitudeService(), for: .create))
     }
 
-    public func settingsViewController() -> (UIViewController & ServiceSettingsNotifying & CompletionNotifying) {
+    public func settingsViewController(chartColors: ChartColorPalette) -> (UIViewController & ServiceSettingsNotifying & CompletionNotifying) {
       return ServiceViewController(rootViewController: AmplitudeServiceTableViewController(service: self, for: .update))
     }
 
