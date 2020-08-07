@@ -6,6 +6,7 @@
 //  Copyright © 2019 LoopKit Authors. All rights reserved.
 //
 
+import SwiftUI
 import LoopKit
 import LoopKitUI
 import AmplitudeServiceKit
@@ -16,7 +17,7 @@ extension AmplitudeService: ServiceUI {
         return ServiceViewController(rootViewController: AmplitudeServiceTableViewController(service: AmplitudeService(), for: .create))
     }
 
-    public func settingsViewController(chartColors: ChartColorPalette) -> (UIViewController & ServiceSettingsNotifying & CompletionNotifying) {
+    public func settingsViewController(chartColors: ChartColorPalette, carbTintColor: Color, glucoseTintColor: Color, guidanceColors: GuidanceColors, insulinTintColor: Color) -> (UIViewController & ServiceSettingsNotifying & CompletionNotifying) {
       return ServiceViewController(rootViewController: AmplitudeServiceTableViewController(service: self, for: .update))
     }
 
