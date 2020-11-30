@@ -35,6 +35,7 @@
 		A9C7BE8F22B9F6FA001F3FB4 /* LoopKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C7BE8D22B9F6FA001F3FB4 /* LoopKit.framework */; };
 		A9FC98E02333EFE10010CBD2 /* AmplitudeServiceKitPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = A9FC98DE2333EFE10010CBD2 /* AmplitudeServiceKitPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9FC98EA2333F8C90010CBD2 /* AmplitudeServiceKitPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FC98E92333F8C90010CBD2 /* AmplitudeServiceKitPlugin.swift */; };
+		C1D0B10225658C1000676998 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1D0B10125658C1000676998 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,7 @@
 		A9FC98DE2333EFE10010CBD2 /* AmplitudeServiceKitPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmplitudeServiceKitPlugin.h; sourceTree = "<group>"; };
 		A9FC98DF2333EFE10010CBD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9FC98E92333F8C90010CBD2 /* AmplitudeServiceKitPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmplitudeServiceKitPlugin.swift; sourceTree = "<group>"; };
+		C1D0B10125658C1000676998 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 				A9A1EE8622BC5AA100DFACDA /* NibLoadable.swift */,
 				A9A1EE8822BC5B6800DFACDA /* Extensions */,
 				A9B0079C22BD5B7D000131DE /* Localizable.strings */,
+				C1D0B10125658C1000676998 /* Assets.xcassets */,
 			);
 			path = AmplitudeServiceKitUI;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1D0B10225658C1000676998 /* Assets.xcassets in Resources */,
 				A9B0079E22BD5B7D000131DE /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
