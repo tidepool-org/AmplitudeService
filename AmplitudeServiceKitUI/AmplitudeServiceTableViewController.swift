@@ -66,7 +66,7 @@ final class AmplitudeServiceTableViewController: UITableViewController, UITextFi
         case .create:
             service.completeCreate()
             if let serviceViewController = navigationController as? ServiceViewController {
-                serviceViewController.notifyServiceCreatedAndSetup(service)
+                serviceViewController.notifyServiceCreatedAndOnboarded(service)
             }
         case .update:
             service.completeUpdate()

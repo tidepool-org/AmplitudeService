@@ -53,7 +53,7 @@ public final class AmplitudeService: Service {
 
     public func completeDelete() {
         try! KeychainManager().setAmplitudeAPIKey()
-        serviceDelegate?.serviceWasDeleted(self)
+        serviceDelegate?.serviceWantsDeletion(self)
     }
 
     private func createClient() {

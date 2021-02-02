@@ -18,7 +18,7 @@ extension AmplitudeService: ServiceUI {
         UIImage(named: "amplitude_logo", in: Bundle(for: AmplitudeServiceTableViewController.self), compatibleWith: nil)!
     }
 
-    public static func setupViewController(colorPalette: LoopUIColorPalette) -> UIResult<UIViewController & ServiceCreateNotifying & ServiceOnboardNotifying & CompletionNotifying, ServiceUI, Error>
+    public static func setupViewController(colorPalette: LoopUIColorPalette) -> SetupUIResult<UIViewController & ServiceCreateNotifying & ServiceOnboardNotifying & CompletionNotifying, ServiceUI>
     {
         return .userInteractionRequired(ServiceViewController(rootViewController: AmplitudeServiceTableViewController(service: AmplitudeService(), for: .create)))
     }
