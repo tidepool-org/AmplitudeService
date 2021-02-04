@@ -34,10 +34,6 @@ public final class AmplitudeService: Service {
 
     public let isOnboarded = true   // No distinction between created and onboarded
 
-    public func delete() {
-        completeDelete()
-    }
-
     public var hasConfiguration: Bool { return apiKey?.isEmpty == false }
 
     public func completeCreate() {
