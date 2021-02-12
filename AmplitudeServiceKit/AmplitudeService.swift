@@ -32,6 +32,8 @@ public final class AmplitudeService: Service {
         return [:]
     }
 
+    public let isOnboarded = true   // No distinction between created and onboarded
+
     public var hasConfiguration: Bool { return apiKey?.isEmpty == false }
 
     public func completeCreate() {
@@ -47,6 +49,7 @@ public final class AmplitudeService: Service {
 
     public func completeDelete() {
         try! KeychainManager().setAmplitudeAPIKey()
+        serviceDelegate?.serviceWantsDeletion(self)
     }
 
     private func createClient() {

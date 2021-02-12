@@ -12,7 +12,6 @@ import AmplitudeServiceKit
 import AmplitudeServiceKitUI
 
 class AmplitudeServiceKitPlugin: NSObject, ServiceUIPlugin {
-
     private let log = OSLog(category: "AmplitudeServiceKitPlugin")
 
     public var serviceType: ServiceUI.Type? {
@@ -21,7 +20,7 @@ class AmplitudeServiceKitPlugin: NSObject, ServiceUIPlugin {
 
     override init() {
         super.init()
-        log.default("AmplitudeServiceKitPlugin Instantiated")
+        log.default("Instantiated")
     }
 
 }

@@ -18,14 +18,12 @@ extension AmplitudeService: ServiceUI {
         UIImage(named: "amplitude_logo", in: Bundle(for: AmplitudeServiceTableViewController.self), compatibleWith: nil)!
     }
 
-    public static var providesOnboarding: Bool { return false }
-    
-    public static func setupViewController(currentTherapySettings: TherapySettings, preferredGlucoseUnit: HKUnit, chartColors: ChartColorPalette, carbTintColor: Color, glucoseTintColor: Color, guidanceColors: GuidanceColors, insulinTintColor: Color) -> (UIViewController & CompletionNotifying & ServiceSetupNotifying)?
+    public static func setupViewController(colorPalette: LoopUIColorPalette) -> SetupUIResult<UIViewController & ServiceCreateNotifying & ServiceOnboardNotifying & CompletionNotifying, ServiceUI>
     {
-        return ServiceViewController(rootViewController: AmplitudeServiceTableViewController(service: AmplitudeService(), for: .create))
+        return .userInteractionRequired(ServiceViewController(rootViewController: AmplitudeServiceTableViewController(service: AmplitudeService(), for: .create)))
     }
     
-    public func settingsViewController(currentTherapySettings: TherapySettings, preferredGlucoseUnit: HKUnit, chartColors: ChartColorPalette, carbTintColor: Color, glucoseTintColor: Color, guidanceColors: GuidanceColors, insulinTintColor: Color) -> (UIViewController & CompletionNotifying & ServiceSettingsNotifying)
+    public func settingsViewController(colorPalette: LoopUIColorPalette) -> (UIViewController & ServiceOnboardNotifying & CompletionNotifying)
     {
         return ServiceViewController(rootViewController: AmplitudeServiceTableViewController(service: self, for: .update))
     }

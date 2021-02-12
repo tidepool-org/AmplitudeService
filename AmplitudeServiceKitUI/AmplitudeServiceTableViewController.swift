@@ -66,7 +66,7 @@ final class AmplitudeServiceTableViewController: UITableViewController, UITextFi
         case .create:
             service.completeCreate()
             if let serviceViewController = navigationController as? ServiceViewController {
-                serviceViewController.notifyServiceCreated(service)
+                serviceViewController.notifyServiceCreatedAndOnboarded(service)
             }
         case .update:
             service.completeUpdate()
@@ -80,9 +80,6 @@ final class AmplitudeServiceTableViewController: UITableViewController, UITextFi
         
         let alert = UIAlertController(serviceDeletionHandler: {
             self.service.completeDelete()
-            if let serviceViewController = self.navigationController as? ServiceViewController {
-                serviceViewController.notifyServiceDeleted(self.service)
-            }
             self.notifyComplete()
         })
         
