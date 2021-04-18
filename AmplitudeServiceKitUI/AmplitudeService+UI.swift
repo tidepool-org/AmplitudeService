@@ -18,14 +18,14 @@ extension AmplitudeService: ServiceUI {
         UIImage(named: "amplitude_logo", in: Bundle(for: AmplitudeServiceTableViewController.self), compatibleWith: nil)!
     }
 
-    public static func setupViewController(colorPalette: LoopUIColorPalette) -> SetupUIResult<UIViewController & ServiceCreateNotifying & ServiceOnboardNotifying & CompletionNotifying, ServiceUI>
+    public static func setupViewController(colorPalette: LoopUIColorPalette) -> SetupUIResult<ServiceViewController, ServiceUI>
     {
-        return .userInteractionRequired(ServiceViewController(rootViewController: AmplitudeServiceTableViewController(service: AmplitudeService(), for: .create)))
+        return .userInteractionRequired(ServiceNavigationController(rootViewController: AmplitudeServiceTableViewController(service: AmplitudeService(), for: .create)))
     }
     
-    public func settingsViewController(colorPalette: LoopUIColorPalette) -> (UIViewController & ServiceOnboardNotifying & CompletionNotifying)
+    public func settingsViewController(colorPalette: LoopUIColorPalette) -> ServiceViewController
     {
-        return ServiceViewController(rootViewController: AmplitudeServiceTableViewController(service: self, for: .update))
+        return ServiceNavigationController(rootViewController: AmplitudeServiceTableViewController(service: self, for: .update))
     }
     
     public func supportMenuItem(supportInfoProvider: SupportInfoProvider, urlHandler: @escaping (URL) -> Void) -> AnyView? {
