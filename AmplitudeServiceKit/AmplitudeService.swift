@@ -55,8 +55,7 @@ public final class AmplitudeService: Service {
     private func createClient() {
         if let apiKey = apiKey {
             let amplitude = Amplitude()
-            amplitude.disableIdfaTracking()
-            amplitude.disableLocationListening()
+            amplitude.setTrackingOptions(AMPTrackingOptions().disableCity().disableCarrier().disableIDFA().disableLatLng())
             amplitude.initializeApiKey(apiKey)
             client = amplitude
         } else {
