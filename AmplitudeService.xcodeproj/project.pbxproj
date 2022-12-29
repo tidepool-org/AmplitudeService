@@ -27,8 +27,6 @@
 		A9FC98E02333EFE10010CBD2 /* AmplitudeServiceKitPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = A9FC98DE2333EFE10010CBD2 /* AmplitudeServiceKitPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9FC98EA2333F8C90010CBD2 /* AmplitudeServiceKitPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FC98E92333F8C90010CBD2 /* AmplitudeServiceKitPlugin.swift */; };
 		C135E036295DFB4F0020258D /* Amplitude in Frameworks */ = {isa = PBXBuildFile; productRef = C135E035295DFB4F0020258D /* Amplitude */; };
-		C135E038295DFC0B0020258D /* Amplitude in Frameworks */ = {isa = PBXBuildFile; productRef = C135E037295DFC0B0020258D /* Amplitude */; };
-		C135E03A295DFC210020258D /* Amplitude in Frameworks */ = {isa = PBXBuildFile; productRef = C135E039295DFC210020258D /* Amplitude */; };
 		C19C8BD028651F8B0056D5E4 /* AmplitudeServiceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C7BE4522B9A7C0001F3FB4 /* AmplitudeServiceKit.framework */; platformFilter = ios; };
 		C19C8BD128651F8B0056D5E4 /* AmplitudeServiceKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9C7BE4522B9A7C0001F3FB4 /* AmplitudeServiceKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C19C8BD428651F8B0056D5E4 /* AmplitudeServiceKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9927C9022BC29940006B7E9 /* AmplitudeServiceKitUI.framework */; platformFilter = ios; };
@@ -162,7 +160,6 @@
 			files = (
 				A92E3BC622BC3CD800B9AF51 /* LoopKit.framework in Frameworks */,
 				A92E3BC322BC3CC300B9AF51 /* LoopKitUI.framework in Frameworks */,
-				C135E03A295DFC210020258D /* Amplitude in Frameworks */,
 				A92E3BC422BC3CC900B9AF51 /* AmplitudeServiceKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,7 +179,6 @@
 			files = (
 				C19C8BD028651F8B0056D5E4 /* AmplitudeServiceKit.framework in Frameworks */,
 				C19C8BD428651F8B0056D5E4 /* AmplitudeServiceKitUI.framework in Frameworks */,
-				C135E038295DFC0B0020258D /* Amplitude in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +328,6 @@
 			);
 			name = AmplitudeServiceKitUI;
 			packageProductDependencies = (
-				C135E039295DFC210020258D /* Amplitude */,
 			);
 			productName = AmplitudeServiceKitUI;
 			productReference = A9927C9022BC29940006B7E9 /* AmplitudeServiceKitUI.framework */;
@@ -379,7 +374,6 @@
 			);
 			name = AmplitudeServiceKitPlugin;
 			packageProductDependencies = (
-				C135E037295DFC0B0020258D /* Amplitude */,
 			);
 			productName = AmplitudeServiceKitPlugin;
 			productReference = A9FC98DC2333EFE10010CBD2 /* AmplitudeServiceKitPlugin.loopplugin */;
@@ -1031,16 +1025,6 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		C135E035295DFB4F0020258D /* Amplitude */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C135E034295DFB4F0020258D /* XCRemoteSwiftPackageReference "Amplitude-iOS" */;
-			productName = Amplitude;
-		};
-		C135E037295DFC0B0020258D /* Amplitude */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C135E034295DFB4F0020258D /* XCRemoteSwiftPackageReference "Amplitude-iOS" */;
-			productName = Amplitude;
-		};
-		C135E039295DFC210020258D /* Amplitude */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C135E034295DFB4F0020258D /* XCRemoteSwiftPackageReference "Amplitude-iOS" */;
 			productName = Amplitude;
