@@ -66,11 +66,13 @@ public final class AmplitudeService: Service {
 }
 
 extension AmplitudeService: AnalyticsService {
-
     public func recordAnalyticsEvent(_ name: String, withProperties properties: [AnyHashable: Any]?, outOfSession: Bool) {
         client?.logEvent(name, withEventProperties: properties, outOfSession: outOfSession)
     }
 
+    public func recordIdentify(_ property: String, value: String) {
+        client?.identify(AMPIdentify().set(property, value: value as NSString))
+    }
 }
 
 extension KeychainManager {
