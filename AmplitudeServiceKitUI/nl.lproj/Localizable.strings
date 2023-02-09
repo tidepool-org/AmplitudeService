@@ -8,7 +8,7 @@
 "Cancel" = "Annuleer";
 
 /* Button title to delete a service */
-"Delete Service" = "Delete Service";
+"Delete Service" = "Service Verwijderen";
 
 /* The default placeholder for required text */
 "Required" = "Vereist";
