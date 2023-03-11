@@ -8,8 +8,8 @@
 "Cancel" = "Отмена";
 
 /* Button title to delete a service */
-"Delete Service" = "Delete Service";
+"Delete Service" = "Удалить сервис";
 
 /* The default placeholder for required text */
-"Required" = "обязательный";
+"Required" = "Обязательное значение";
 
