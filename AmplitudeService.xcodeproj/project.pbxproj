@@ -132,8 +132,12 @@
 		A9FC98DE2333EFE10010CBD2 /* AmplitudeServiceKitPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmplitudeServiceKitPlugin.h; sourceTree = "<group>"; };
 		A9FC98DF2333EFE10010CBD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9FC98E92333F8C90010CBD2 /* AmplitudeServiceKitPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmplitudeServiceKitPlugin.swift; sourceTree = "<group>"; };
+		C121D8C829C7866D00DA0520 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C15A581529C7866600D3A5A1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C15A581629C7866600D3A5A1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C1C2477A2995823200371B88 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C1D0B10125658C1000676998 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C1FAB5B829C786B000D25073 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F5D9C04E27DAC395002E48F6 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F5D9C04F27DAC395002E48F6 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F5D9C05027DAC3A8002E48F6 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -428,6 +432,9 @@
 				ja,
 				"pt-BR",
 				sk,
+				ar,
+				cs,
+				hi,
 			);
 			mainGroup = A9C7BE3B22B9A7C0001F3FB4;
 			packageReferences = (
@@ -558,6 +565,7 @@
 				F5E0BE3427E1E0B00033557E /* he */,
 				F5E0BE3627E1E0B80033557E /* ja */,
 				F5E0BE3827E1E0C00033557E /* pt-BR */,
+				C15A581529C7866600D3A5A1 /* ar */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -585,6 +593,9 @@
 				F5E0BE3727E1E0B80033557E /* ja */,
 				F5E0BE3927E1E0C00033557E /* pt-BR */,
 				C1C2477A2995823200371B88 /* sk */,
+				C15A581629C7866600D3A5A1 /* ar */,
+				C121D8C829C7866D00DA0520 /* cs */,
+				C1FAB5B829C786B000D25073 /* hi */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
