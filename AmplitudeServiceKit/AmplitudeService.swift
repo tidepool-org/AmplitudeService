@@ -73,6 +73,10 @@ extension AmplitudeService: AnalyticsService {
     public func recordIdentify(_ property: String, value: String) {
         client?.identify(AMPIdentify().set(property, value: value as NSString))
     }
+
+    public func recordIdentify(_ property: String, array: [String]) {
+        client?.identify(AMPIdentify().set(property, value: array as NSArray))
+    }
 }
 
 extension KeychainManager {
