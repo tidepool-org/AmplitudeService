@@ -11,11 +11,13 @@ import LoopKit
 
 public final class AmplitudeService: Service {
 
-    public static let serviceIdentifier = "AmplitudeService"
+    public static let pluginIdentifier = "AmplitudeService"
 
     public static let localizedTitle = LocalizedString("Amplitude", comment: "The title of the Amplitude service")
 
     public weak var serviceDelegate: ServiceDelegate?
+    
+    public weak var stateDelegate: StatefulPluggableDelegate?
 
     public var apiKey: String?
 
@@ -44,12 +46,12 @@ public final class AmplitudeService: Service {
     public func completeUpdate() {
         try! KeychainManager().setAmplitudeAPIKey(apiKey)
         createClient()
-        serviceDelegate?.serviceDidUpdateState(self)
+        stateDelegate?.pluginDidUpdateState(self)
     }
 
     public func completeDelete() {
         try! KeychainManager().setAmplitudeAPIKey()
-        serviceDelegate?.serviceWantsDeletion(self)
+        stateDelegate?.pluginWantsDeletion(self)
     }
 
     private func createClient() {
