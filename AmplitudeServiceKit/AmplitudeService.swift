@@ -11,7 +11,7 @@ import LoopKit
 
 public final class AmplitudeService: Service {
 
-    public static let pluginIdentifier = "AmplitudeService"
+    public let pluginIdentifier = "AmplitudeService"
 
     public static let localizedTitle = LocalizedString("Amplitude", comment: "The title of the Amplitude service")
 
